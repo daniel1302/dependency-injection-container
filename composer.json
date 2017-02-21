@@ -1,0 +1,16 @@
+{
+    "name": "daniel1302/container",
+    "description": "Simple Dependency Injection Container",
+    "keywords": ["dependency", "injection", "container", "di", "di-container"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Daniel Hornik",
+            "email": "daniel.1302@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Fanta\\Container": "src/"}
+    }
+}
