@@ -1,5 +1,5 @@
 {
-    "name": "daniel1302/container",
+    "name": "fanta/container",
     "description": "Simple Dependency Injection Container",
     "keywords": ["dependency", "injection", "container", "di", "di-container"],
     "type": "library",
@@ -11,6 +11,8 @@
     ],
     "require": {},
     "autoload": {
-        "psr-4": {"Fanta\\Container": "src/"}
+        "psr-4": {
+            "Fanta\\Container\\": ""
+        }
     }
 }
