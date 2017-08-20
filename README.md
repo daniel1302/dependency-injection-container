@@ -6,7 +6,7 @@ To register service in container in container you must to use Object::Container 
 Installation
 ===========
 ```bash
-$ composer require fanta/DependencyInjectionContainer
+$ composer require vallheru/container
 $ composer update
 ```
 
@@ -57,3 +57,23 @@ Container::addDefinition('pdf', function() {
     return $pdf;
 });
 ````
+
+
+What is shared and not shared service
+=====================================
+- **Shared** service causes that in application exists only one instance of service.
+When you call Container::get method you get same instance every time.
+
+- **Not Shared** service causes that every time when you call Container::get method, you get new instance of service
+
+Register not shared service
+============================
+```php
+Container::addDefinition('serviceA', function() {
+    $service = new ServiceA();
+    $service->init(rand(1, 9999));
+    
+    return $service;
+}, ['shared' => false]);
+
+```
